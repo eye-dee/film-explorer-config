@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: film-search
   kafka:
     bootstrap-servers: ${KAFKA_URL:localhost}:9092
     consumer:
@@ -16,3 +18,12 @@ spring:
     elasticsearch:
       cluster-name: elasticsearch
       cluster-nodes: ${ELASTIC_URL:localhost}:9300
+server:
+  port: 8083
+
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://${DISCOVERY_URL:localhost}:8082/eureka/
