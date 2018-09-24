@@ -19,7 +19,7 @@ spring:
       cluster-name: elasticsearch
       cluster-nodes: ${ELASTIC_URL:localhost}:9300
 server:
-  port: 8083
+  port: 8084
 
 eureka:
   client:
